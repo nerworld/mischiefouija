@@ -30,11 +30,11 @@
       $(".letter").hover(function() {
           var self = this;
           setTimeoutConst = setTimeout(function(){
-              console.log(self.id + "  enter")
+              console.log(self.id + "  was spelled")
           }, delay);
         }, function() {
             clearTimeout(setTimeoutConst );
-              console.log(this.id + "  leave")
+            //   console.log(this.id + "  leave")
 
             }
       );
