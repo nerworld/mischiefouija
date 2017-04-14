@@ -6,38 +6,64 @@
     <title>mousemousemousemousemousemousemousemousemousemouse</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
-
-<!--
-█████████████████████████████████████████████████
-                    JS
-█████████████████████████████████████████████████
- -->
-
-
-
-<!--
-█████████████████████████████████████████████████
-                DOC READY
-█████████████████████████████████████████████████
- -->
 <script type="text/javascript">
+
+// █████████████████████████████████████████████████
+//                     JS
+// █████████████████████████████████████████████████
+
+
+// █████████████████████████████████████████████████
+//                 DOC READY
+// █████████████████████████████████████████████████
+
+
   $( document ).ready(function() {
       console.log( "ready =) !!!" );
 
       var delay = 1200;
-      var setTimeoutConst;
+      var setTimeoutConst1;
+      var setTimeoutConst2;
+      var setTimeoutConst3;
 
       $(".letter").hover(function() {
           var self = this;
+
           setTimeoutConst = setTimeout(function(){
-              console.log(self.id + "  was spelled")
+              console.log(self.id.toUpperCase() + "  was spelled")
+            $( "#response" ).append( self.id.toUpperCase() );
           }, delay);
         }, function() {
             clearTimeout(setTimeoutConst );
-            //   console.log(this.id + "  leave")
-
             }
       );
+
+
+      $("#space").hover(function() {
+          setTimeoutConst2 = setTimeout(function(){
+            $( "#response" ).append( " " );
+          }, delay);
+        }, function() {
+            clearTimeout(setTimeoutConst2 );
+            }
+      );
+
+
+
+
+      $("#clear").hover(function() {
+          setTimeoutConst3 = setTimeout(function(){
+            $( "#response" ).html("");
+          }, delay);
+        }, function() {
+            clearTimeout(setTimeoutConst3 );
+            }
+      );
+
+
+
+
+
 
 
 });
@@ -52,34 +78,41 @@
    -->
   <body>
 
-      <div id = "a" class="letter">A</div>
-      <div id = "b" class="letter">B</div>
-      <div id = "c" class="letter">C</div>
-      <div id = "d" class="letter">D</div>
-      <div id = "e" class="letter">B</div>
-      <div id = "f" class="letter">C</div>
-      <div id = "g" class="letter">A</div>
-      <div id = "h" class="letter">B</div>
-      <div id = "i" class="letter">C</div>
-      <div id = "j" class="letter">A</div>
-      <div id = "k" class="letter">B</div>
-      <div id = "l" class="letter">C</div>
-      <div id = "m" class="letter">A</div>
-      <div id = "n" class="letter">B</div>
-      <div id = "o" class="letter">C</div>
-      <div id = "p" class="letter">A</div>
-      <div id = "q" class="letter">B</div>
-      <div id = "r" class="letter">C</div>
-      <div id = "s" class="letter">A</div>
-      <div id = "t" class="letter">B</div>
-      <div id = "u" class="letter">C</div>
-      <div id = "v" class="letter">A</div>
-      <div id = "w" class="letter">B</div>
-      <div id = "x" class="letter">C</div>
-      <div id = "y" class="letter">A</div>
-      <div id = "z" class="letter">B</div>
-      <div id = "yes" class="letter">C</div>
-      <div id = "no" class="letter">C</div>
+      <div id = "a" class="letter"></div>
+      <div id = "b" class="letter"></div>
+      <div id = "c" class="letter"></div>
+      <div id = "d" class="letter"></div>
+      <div id = "e" class="letter"></div>
+      <div id = "f" class="letter"></div>
+      <div id = "g" class="letter"></div>
+      <div id = "h" class="letter"></div>
+      <div id = "i" class="letter"></div>
+      <div id = "j" class="letter"></div>
+      <div id = "k" class="letter"></div>
+      <div id = "l" class="letter"></div>
+      <div id = "m" class="letter"></div>
+      <div id = "n" class="letter"></div>
+      <div id = "o" class="letter"></div>
+      <div id = "p" class="letter"></div>
+      <div id = "q" class="letter"></div>
+      <div id = "r" class="letter"></div>
+      <div id = "s" class="letter"></div>
+      <div id = "t" class="letter"></div>
+      <div id = "u" class="letter"></div>
+      <div id = "v" class="letter"></div>
+      <div id = "w" class="letter"></div>
+      <div id = "x" class="letter"></div>
+      <div id = "y" class="letter"></div>
+      <div id = "z" class="letter"></div>
+      <div id = "yes" class="letter"></div>
+      <div id = "no" class="letter"></div>
+
+      <div id = "response"></div>
+
+
+      <button id= "space" class= "button" type="button">[space]</button>
+      <button id= "clear" class= "button" type="button">[clear]</button>
+
 
 
 
@@ -94,58 +127,228 @@
  -->
 <style>
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab|Lekton');
 
 :root{
     --gradient: linear-gradient(#fba898, #9fbdfc);
     --txt-color: black;
     --shad-color: white;
     --butt-color: white;
-    --font:'Rubik', sans-serif;
+    --font:  'Kelly Slab', cursive;
 }
 
 body {
     margin: 0px;
     padding: 0px;
-    height: 100%;
+    height: 100px;
     display: block;
     background-color: black;
     font-family: var(--font);
-    font-size: 20px;
     color: var(--txt-color);
     line-height: 120%;
     text-shadow: none;
-    background-image: url("https://melanie-hoff.com/_images/mischiefouija01.jpg");
+    background-image: url("https://melanie-hoff.com/_images/mischiefouija04.jpg");
     background-attachment: fixed;
     background-size: 1440px;
     background-repeat: no-repeat;
 
 }
 
+#response {
+    font-size: 160px;
+    width: 1440px;
+    height: 60;
+    font-family: var(--font);
+    color: #2f004d;
+    /*border: 1px solid blue;*/
+    position: absolute;
+    text-align: center;
+    top: 700px;
+    text-shadow: 4px 2px 9px #450a69;
+    /*background-image: url("https://melanie-hoff.com/_images/cursor.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+#space, #clear {
+    font-size: 40px;
+    font-family: courier;
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    text-align: center;
+    top: 550px;
+    left: 510px;
+    outline: none;
+}
+
+#clear {
+    left: 750px !important;
+}
+
+
 .letter {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     color: white !important;
-    border: 4px solid blue;
-    opacity:0.4;
-    background-color: violet;
+    /*border: 4px solid blue;
+    opacity:0.4;*/
+    /*background-color: violet;*/
+    position: absolute;
+}
+
+#yes {
+    left: 210px;
+    top: 90px;
+    width: 200px;
+    height: 90px;
+}
+
+#no {
+    left: 1090px;
+    top: 90px;
+    width: 120px;
 }
 
 #a {
-    position: absolute;
-    left: 40px;
-    top: 250px;
+    left: 45px;
+    top: 255px;
 }
 
 #b {
-    position: absolute;
-    left: 145px;
-    top: 250px;
+    left: 150px;
+    top: 255px;
 }
 
 #c {
-    position: absolute;
-    left: 250px;
-    top: 250px;
+    left: 255px;
+    top: 255px;
+}
+
+#d {
+    left: 360px;
+    top: 255px;
+}
+
+#e {
+    left: 460px;
+    top: 255px;
+}
+
+#f {
+    left: 565px;
+    top: 255px;
+}
+
+#g {
+    left: 670px;
+    top: 255px;
+}
+
+#h {
+    left: 773px;
+    top: 255px;
+}
+
+#i {
+    left: 873px;
+    top: 255px;
+}
+
+#j {
+    left: 978px;
+    top: 255px;
+}
+
+#k {
+    left: 1084px;
+    top: 255px;
+}
+
+#l {
+    left: 1184px;
+    top: 255px;
+}
+
+#m {
+    left: 1289px;
+    top: 255px;
+}
+
+/*Lower Letters*/
+/*█████████████████████████████████████████████████*/
+
+#n {
+    left: 45px;
+    top: 428px;
+}
+
+#o {
+    left: 150px;
+    top: 428px;
+}
+
+#p {
+    left: 255px;
+    top: 428px;
+}
+
+#q {
+    left: 360px;
+    top: 428px;
+}
+
+#r {
+    left: 460px;
+    top: 428px;
+}
+
+#s {
+    left: 565px;
+    top: 428px;
+}
+
+#t {
+    left: 670px;
+    top: 428px;
+}
+
+#u {
+    left: 773px;
+    top: 428px;
+}
+
+#v {
+    left: 875px;
+    top: 428px;
+}
+
+#w {
+    left: 980px;
+    top: 428px;
+}
+
+#x {
+    left: 1087px;
+    top: 428px;
+}
+
+#y {
+    left: 1187px;
+    top: 428px;
+}
+
+#z {
+    left: 1292px;
+    top: 428px;
 }
 
 
