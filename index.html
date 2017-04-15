@@ -5,7 +5,6 @@
 <meta charset="UTF-8">
     <title>mousemousemousemousemousemousemousemousemousemouse</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 <script type="text/javascript">
 
 // █████████████████████████████████████████████████
@@ -41,7 +40,7 @@
 
       $("#space").hover(function() {
           setTimeoutConst2 = setTimeout(function(){
-            $( "#response" ).append( " " );
+            $( "#response" ).append( "<span>&nbsp</span>" );
           }, delay);
         }, function() {
             clearTimeout(setTimeoutConst2 );
@@ -134,10 +133,11 @@
     --txt-color: black;
     --shad-color: white;
     --butt-color: white;
-    --font:  'Kelly Slab', cursive;
+    /*--font:  'Kelly Slab', cursive;*/
+    --font: courier;
 }
 
-body {
+html, body {
     margin: 0px;
     padding: 0px;
     height: 100px;
@@ -151,6 +151,7 @@ body {
     background-attachment: fixed;
     background-size: 1440px;
     background-repeat: no-repeat;
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
 
 }
 
@@ -165,6 +166,7 @@ body {
     text-align: center;
     top: 700px;
     text-shadow: 4px 2px 9px #450a69;
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
     /*background-image: url("https://melanie-hoff.com/_images/cursor.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;*/
@@ -176,6 +178,11 @@ body {
     color: black;
     text-align: center;
     text-decoration: none;
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
+}
+
+.button :hover {
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
 }
 
 #space, #clear {
@@ -193,7 +200,9 @@ body {
 #clear {
     left: 750px !important;
 }
-
+#clear, #space :hover {
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
+}
 
 .letter {
     width: 80px;
@@ -203,6 +212,11 @@ body {
     opacity:0.4;*/
     /*background-color: violet;*/
     position: absolute;
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
+}
+
+.letter :hover {
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
 }
 
 #yes {
@@ -372,6 +386,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
 }
 .centerdiv {
     display: flex;
@@ -383,6 +398,7 @@ body {
     padding: 30px;
     border-style: dashed;
     border-color: var(--txt-color);
+    cursor: url("https://melanie-hoff.com/_images/cursor02.cur"), pointer !important;
     /*height:100vh;*/
 }
 </style>
