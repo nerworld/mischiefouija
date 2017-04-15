@@ -1,7 +1,7 @@
 # mischiefouija
-![](https://github.com/nerworld/mischiefouija/blob/master/Screen%20Shot%202017-04-15%20at%202.30.33%20AM.png?raw=true)
+![](mischiefouija/Screen Shot 2017-04-15 at 2.34.39 AM.png)
 
 
-A web based ouija borad for multiple humans to guide one cursor with multiple mice.
+A web based ouija borad for multiple humans guiding one cursor using multiple mice.
 
 By Dan Taeyoung and Melanie Hoff
